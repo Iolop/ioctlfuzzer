@@ -4,6 +4,7 @@
 
 When I try to compile the driver ,there is something wrong. So I fixed the include path<If you want to compile, please remember to fix the path in /src/driver/makefile_i386>
 
+After fix the include path, there is still a lot of error about some macros of definitions.
 BTW:Build.log is encoding in GBK.
 
 
@@ -25,7 +26,9 @@ IOCTL Fuzzer ver. 1.3
 
 
 ==============================================
+
  Overview
+
 ==============================================
 
 IOCTL Fuzzer is a tool designed to automate the task of searching vulnerabilities in Windows kernel drivers by performing fuzz tests on them.
@@ -52,7 +55,9 @@ Information from this file can be used for calculating requests count for each d
 
 
 ==============================================
+
  Command line options
+
 ==============================================
 
 --config <path> - Specify path to the fuzzer XML configuration file. For more information about configuration file format see example in bin/ioctlfuzzer.xml. If '--config' option is not specified - application will start in IOCTLs monitoring mode.
@@ -76,7 +81,9 @@ Typical usage example (run IOCTL Fuzzer with XML config and enable exceptions mo
 
 
 ==============================================
+
  Using the fuzzer
+
 ==============================================
 
 General algorithm for fuzz-testing an application is as follows.
@@ -97,7 +104,9 @@ General algorithm for fuzz-testing an application is as follows.
 
 
 ==============================================
+
  Using the attack surface analysis feature
+
 ==============================================
 
 Typical attack surface analysis usage scenario:
@@ -114,8 +123,10 @@ Typical attack surface analysis usage scenario:
 
 
 ==============================================
+
  Using the fuzzer with
  Kernel Debugger Communication Engine
+
 ==============================================
 
 Integration with Kernel Debugger Communicatioin Engine allows the IOCTL Fuzzer to execute any commands in remote kernel debugger for IOCTL requests parameters, which were specified in the XML configuration file.
