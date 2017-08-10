@@ -4,7 +4,13 @@ ALL: $(OUTNAME).sys
 
 CC=cl.exe
 
-CFLAGS=/nologo -I".\src" -I"$(DDK_INC_PATH)" -I"$(CRT_INC_PATH)" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c
+DDK_INC_PATH=C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\
+
+CRT_INC_PATH=C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt\
+
+SHARED_INC_PATH=C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\
+
+CFLAGS=/nologo -I".\src" -I"$(DDK_INC_PATH)" -I"$(CRT_INC_PATH)" -I"$(SHARED_INC_PATH)" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c
 
 AM=ml.exe
 
@@ -19,8 +25,8 @@ LN=link.exe
 
 LFLAGS=/LIBPATH:$(DDK_LIB_PATH)\..\i386 /LIBPATH:$(CRT_LIB_PATH)\..\i386 /OPT:REF /OPT:ICF /INCREMENTAL:NO /DEBUG /STACK:0x40000,0x1000 /DRIVER /BASE:0x10000 /ALIGN:0x80 /SUBSYSTEM:native,5.01 /ENTRY:DriverEntry /DEF:driver.def /OUT:..\$(OUTNAME).sys
 
-$(OUTNAME).sys: $(LOBJS)        
+$(OUTNAME).sys: $(LOBJS)
     $(LN) $(LFLAGS) $(LOBJS) $(LLIBS)
 
 clean:
-     @del *.obj 
+     @del *.obj

@@ -1,0 +1,14 @@
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c src/driver.cpp
+driver.cpp
+d:\github-res\hook\ioctlfuzzer\src\driver\src\r0_common/undocnt.h(704): error C2061: 语法错误: 标识符“PKKERNEL_ROUTINE”
+d:\github-res\hook\ioctlfuzzer\src\driver\src\excpthook.h(18): error C2011: “_EXCEPTION_REGISTRATION_RECORD”:“struct”类型重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\ntddk.h(4567): note: 参见“_EXCEPTION_REGISTRATION_RECORD”的声明
+src/driver.cpp(258): error C3688: 文本后缀“IFMT”无效；未找到文文本运算符或文本运算符模板“operator """"IFMT”
+src/driver.cpp(258): error C2664: “void DbgMsg(char *,int,char *,...)”: 无法将参数 3 从“PVOID”转换为“char *”
+src/driver.cpp(258): note: 从“void*”到指向非“void”的指针的转换要求显式类型转换
+src/driver.cpp(424): error C3688: 文本后缀“IFMT”无效；未找到文文本运算符或文本运算符模板“operator """"IFMT”
+src/driver.cpp(426): error C2664: “void DbgMsg(char *,int,char *,...)”: 无法将参数 3 从“NT_DEVICE_IO_CONTROL_FILE”转换为“char *”
+src/driver.cpp(426): note: 没有使该转换得以执行的上下文
+src/driver.cpp(1310): error C3688: 文本后缀“IFMT”无效；未找到文文本运算符或文本运算符模板“operator """"IFMT”
+src/driver.cpp(1310): error C2664: “void DbgMsg(char *,int,char *,...)”: 无法将参数 3 从“PUNICODE_STRING”转换为“char *”
+src/driver.cpp(1310): note: 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换

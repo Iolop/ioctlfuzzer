@@ -1,10 +1,19 @@
----
+```
+
+2017-08-10 15:33PM
+
+When I try to compile the driver ,there is something wrong. So I fixed the include path<If you want to compile, please remember to fix the path in /src/driver/makefile_i386>
+
+BTW:Build.log is encoding in GBK.
+
+
+2017-08-10 11:00AM
 
 This repository comes from Google Project(https://code.google.com/archive/p/ioctlfuzzer/source/default/source)
 
 Because I found some exe and sys files disappeared in Cr4sh's repository.
 
----
+```
 
 
 IOCTL Fuzzer ver. 1.3

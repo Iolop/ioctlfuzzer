@@ -99,7 +99,7 @@ ULONG GetPrevModeOffset(void)
             /*
                 nt!ExGetPreviousMode:
                 8052b334 64a124010000    mov     eax,dword ptr fs:[00000124h]
-                8052b33a 8a8040010000    mov     al,byte ptr [eax+140h]
+                8052b33a 8a8040010000    mov     al,byte ptr [eax+140h] in win7 home p x86 it's 13a
                 8052b340 c3              ret
             */
 
@@ -115,7 +115,7 @@ ULONG GetPrevModeOffset(void)
             /*
                 nt!ExGetPreviousMode:
                 fffff800`02691d50 65488b042588010000 mov     rax,qword ptr gs:[188h]
-                fffff800`02691d59 8a80f6010000       mov     al,byte ptr [rax+1F6h]
+                fffff800`02691d59 8a80f6010000       mov     al,byte ptr [rax+1F6h] not check here
                 fffff800`02691d5f c3                 ret
             */
 
@@ -194,7 +194,7 @@ PVOID GetKeSDT(void)
             for (ULONG i = 0; i < 0x40;)
             {
                 PUCHAR Inst = (PUCHAR)RVATOVA(KernelBase, Func_RVA + i);
-                if (!MmIsAddressValid(Inst))
+                if (!MmIsAddressValid(Inst))//loop to find a valid address in kernel mode
                 {
                     DbgMsg(__FILE__, __LINE__, __FUNCTION__"() ERROR: Invalid memory at "IFMT"\n", Inst);
                     break;
@@ -228,7 +228,7 @@ PVOID GetKeSDT(void)
                 if ((*(PULONG)Inst & 0x00ffffff) == 0x1d8d4c &&
                     (*(PUSHORT)(Inst + 0x0b) == 0x834b || *(PUSHORT)(Inst + 0x0b) == 0x834a))
                 {
-                    // clculate nt!KeServiceDescriptorTableAddress
+                    // calculate nt!KeServiceDescriptorTableAddress
                     LARGE_INTEGER Addr;
                     Addr.QuadPart = (ULONGLONG)Inst + InstLen;
                     Addr.LowPart += *(PULONG)(Inst + 0x03) + *(PULONG)(Inst + 0x0f);
@@ -275,7 +275,7 @@ ULONG LoadSyscallNumber(char *lpszName)
         OBJECT_ATTRIBUTES ObjAttr;
         InitializeObjectAttributes(&ObjAttr, &m_RegistryPath, OBJ_CASE_INSENSITIVE | OBJ_KERNEL_HANDLE, NULL, NULL);
 
-        // open service key
+        // open service key .register key operation?
         ns = ZwOpenKey(&hKey, KEY_ALL_ACCESS, &ObjAttr);
         if (NT_SUCCESS(ns))        
         {
@@ -409,7 +409,7 @@ BOOLEAN SetUpHooks(void)
     if (m_KeServiceDescriptorTable = (PSERVICE_DESCRIPTOR_TABLE)GetKeSDT())
     {
         // disable memory write protection
-        ForEachProcessor(ClearWp, NULL);                
+        ForEachProcessor(ClearWp, NULL);      //check the active processor and create a thread(clearWp)          
 
 #ifdef _X86_        
 
@@ -728,7 +728,7 @@ NTSTATUS DriverDispatch(PDEVICE_OBJECT DeviceObject, PIRP Irp)
     {
         ULONG Code = stack->Parameters.DeviceIoControl.IoControlCode;        
         ULONG Size = stack->Parameters.DeviceIoControl.InputBufferLength;
-        PREQUEST_BUFFER Buff = (PREQUEST_BUFFER)Irp->AssociatedIrp.SystemBuffer;
+        PREQUEST_BUFFER Buff = (PREQUEST_BUFFER)Irp->AssociatedIrp.SystemBuffer;//SystemBuffer used on METHOD_IN/OUT_DIRECT,but here....
 
 #ifdef DBG_IO
 
@@ -742,7 +742,7 @@ NTSTATUS DriverDispatch(PDEVICE_OBJECT DeviceObject, PIRP Irp)
             {
                 Buff->Status = S_ERROR;
 
-                if (Size >= sizeof(REQUEST_BUFFER))
+                if (Size >= sizeof(REQUEST_BUFFER))//inputBufferLength >= struct<REQUEST_BUFFER>
                 {
                     ULONG KdCommandLength = 0;
                     IOCTL_FILTER Flt;                    
