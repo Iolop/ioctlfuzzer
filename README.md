@@ -165,7 +165,9 @@ Note: Kernel Debugger Communication engine uses breakpoints for interaction betw
 
 
 ==============================================
+
  Building from sources
+ 
 ==============================================
 
 1. Download and install Windows Driver Kit Version 7.1.0
