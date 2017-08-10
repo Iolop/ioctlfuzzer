@@ -2,7 +2,7 @@
 
 This repository comes from Google Project(https://code.google.com/archive/p/ioctlfuzzer/source/default/source)
 
-Because I found some exe and sys files disappered in Cr4sh's repository.
+Because I found some exe and sys files disappeared in Cr4sh's repository.
 
 ---
 
