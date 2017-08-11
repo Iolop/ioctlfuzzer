@@ -149,7 +149,7 @@ void NTAPI ProcessNotifyRoutine(HANDLE ParentId, HANDLE ProcessId, BOOLEAN Creat
                     WCHAR wcProcess[0x200];
                     UNICODE_STRING usProcess;
 
-                    LogData("Process "IFMT" started: '%wZ' (PID: %d)\r\n\r\n", Process, &ImagePath, ProcessId);
+                    //LogData("Process "IFMT" started: '%wZ' (PID: %d)\r\n\r\n", Process, &ImagePath, ProcessId);
 
                     swprintf(wcProcess, L"'%wZ' (" IFMT_W L")", &ImagePath, Process);
                     RtlInitUnicodeString(&usProcess, wcProcess);                               
@@ -171,7 +171,7 @@ void NTAPI ProcessNotifyRoutine(HANDLE ParentId, HANDLE ProcessId, BOOLEAN Creat
             }
             else
             {
-                LogData("Process "IFMT" terminated\r\n\r\n", Process);
+                //LogData("Process "IFMT" terminated\r\n\r\n", Process);
 
                 // process terminating
                 PCOMMON_LST_ENTRY process_entry = LookupProcessInfo(Process);            
@@ -941,13 +941,13 @@ NTSTATUS NTAPI new_NtDeviceIoControlFile(
                                 bLogOutputBuffer = TRUE;
 
                                 // log common information about this IOCTL
-                                LogData(
-                                    "'%wZ' (PID: %d)\r\n"
-                                    "'%wZ' ("IFMT") [%wZ]\r\n"
-                                    "IOCTL Code: 0x%.8x,  Method: %ws\r\n",
-                                    ProcessImagePath, ProcessId, &DeviceObjectName->Name, pDeviceObject, 
-                                    &pModuleEntry->FullDllName, IoControlCode, lpwcMethod
-                                );
+                                //LogData(
+                                //    "'%wZ' (PID: %d)\r\n"
+                                //    "'%wZ' ("IFMT") [%wZ]\r\n"
+                                //    "IOCTL Code: 0x%.8x,  Method: %ws\r\n",
+                                //    ProcessImagePath, ProcessId, &DeviceObjectName->Name, pDeviceObject, 
+                                //    &pModuleEntry->FullDllName, IoControlCode, lpwcMethod
+                                //);
 
                                 if (m_FuzzOptions & FUZZ_OPT_LOG_IOCTL_BUFFERS)
                                 {
@@ -955,10 +955,10 @@ NTSTATUS NTAPI new_NtDeviceIoControlFile(
                                 }
 
                                 // log output buffer information
-                                LogData("   OutBuff: "IFMT", OutSize: 0x%.8x\r\n", OutputBuffer, OutputBufferLength);
+                                //LogData("   OutBuff: "IFMT", OutSize: 0x%.8x\r\n", OutputBuffer, OutputBufferLength);
 
                                 // log input buffer information
-                                LogData("    InBuff: "IFMT",  InSize: 0x%.8x\r\n", InputBuffer, InputBufferLength);
+                                //LogData("    InBuff: "IFMT",  InSize: 0x%.8x\r\n", InputBuffer, InputBufferLength);
 
                                 if ((m_FuzzOptions & FUZZ_OPT_LOG_IOCTL_BUFFERS) && 
                                     InputBufferLength > 0 && InputBufferLength)

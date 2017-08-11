@@ -10,7 +10,7 @@ CRT_INC_PATH=C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt\
 
 SHARED_INC_PATH=C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\
 
-CFLAGS=/nologo -I".\src" -I"$(DDK_INC_PATH)" -I"$(CRT_INC_PATH)" -I"$(SHARED_INC_PATH)" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c
+CFLAGS=/nologo -I".\src" -I"$(DDK_INC_PATH)" -I"$(CRT_INC_PATH)" -I"$(SHARED_INC_PATH)" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX-
 
 AM=ml.exe
 
@@ -21,9 +21,12 @@ common_asm.obj: src/asm/i386/common_asm.asm
 
 include makefile.inc
 
-LN=link.exe
+LN="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_arm\link.exe"
 
-LFLAGS=/LIBPATH:$(DDK_LIB_PATH)\..\i386 /LIBPATH:$(CRT_LIB_PATH)\..\i386 /OPT:REF /OPT:ICF /INCREMENTAL:NO /DEBUG /STACK:0x40000,0x1000 /DRIVER /BASE:0x10000 /ALIGN:0x80 /SUBSYSTEM:native,5.01 /ENTRY:DriverEntry /DEF:driver.def /OUT:..\$(OUTNAME).sys
+DDK_LIB_PATH="C:\Program Files (x86)\Windows Kits\10\Lib\10.0.15063.0\km\x86"
+CMT_LIB_PATH="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib"
+
+LFLAGS=/LIBPATH:$(DDK_LIB_PATH) /LIBPATH:$(CMT_LIB_PATH) /OPT:REF /OPT:ICF /INCREMENTAL:NO /DEBUG /STACK:0x40000,0x1000 /DRIVER /BASE:0x10000 /ALIGN:0x80 /SUBSYSTEM:native,5.01 /ENTRY:DriverEntry /DEF:driver.def /OUT:..\$(OUTNAME).sys
 
 $(OUTNAME).sys: $(LOBJS)
     $(LN) $(LFLAGS) $(LOBJS) $(LLIBS)

@@ -14,6 +14,7 @@
 // which is not included on risc.
 //
 
+/*
 typedef struct _EXCEPTION_REGISTRATION_RECORD 
 {
     struct _EXCEPTION_REGISTRATION_RECORD *Next;
@@ -21,6 +22,7 @@ typedef struct _EXCEPTION_REGISTRATION_RECORD
 
 } EXCEPTION_REGISTRATION_RECORD,
 *PEXCEPTION_REGISTRATION_RECORD;
+*/
 
 typedef struct _KTRAP_FRAME 
 {

@@ -24,6 +24,7 @@
 #define SECONDS(seconds)        \
     (((signed __int64)(seconds)) * MILLISECONDS(1000L))
 
+/*
 #define IFMT32 "0x%.8x"
 #define IFMT64 "0x%.16I64x"
 
@@ -41,6 +42,7 @@
 #define IFMT_W IFMT64_W
 
 #endif
+*/
 
 BOOLEAN SetObjectSecurityWorld(HANDLE hObject, ACCESS_MASK AccessMask);
 PVOID KernelGetModuleBase(char *ModuleName);

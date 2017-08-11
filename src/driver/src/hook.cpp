@@ -38,7 +38,7 @@ PVOID Hook(PVOID Function, PVOID Handler, PULONG pBytesPatched)
         if (dwInstLen == 0)
         {
             // error while disassembling instruction
-            DbgMsg(__FILE__, __LINE__, __FUNCTION__"() ERROR: Can't disassemble instruction at "IFMT"\n", pInst);
+            //DbgMsg(__FILE__, __LINE__, __FUNCTION__"() ERROR: Can't disassemble instruction at "IFMT"\n", pInst);
             return NULL;
         }
 
@@ -46,7 +46,7 @@ PVOID Hook(PVOID Function, PVOID Handler, PULONG pBytesPatched)
             ud_obj.mnemonic == UD_Icall)
         {
             // call/jmp with relative address
-            DbgMsg(__FILE__, __LINE__, __FUNCTION__"() call/jmp/jxx instruction at "IFMT"\n", pInst);
+            //DbgMsg(__FILE__, __LINE__, __FUNCTION__"() call/jmp/jxx instruction at "IFMT"\n", pInst);
             return NULL;
         }
 
@@ -55,7 +55,7 @@ PVOID Hook(PVOID Function, PVOID Handler, PULONG pBytesPatched)
             if (ud_obj.operand[i].type == UD_OP_JIMM)
             {
                 // jxx with relative address
-                DbgMsg(__FILE__, __LINE__, __FUNCTION__"() jxx instruction at "IFMT"\n", pInst);
+                //DbgMsg(__FILE__, __LINE__, __FUNCTION__"() jxx instruction at "IFMT"\n", pInst);
                 return NULL;
             }
         }
@@ -70,7 +70,7 @@ PVOID Hook(PVOID Function, PVOID Handler, PULONG pBytesPatched)
             ud_obj.mnemonic == UD_Iiretd)
         {
             // end of the function thunk?
-            DbgMsg(__FILE__, __LINE__, __FUNCTION__"() ret/retn/iret instruction at "IFMT"\n", pInst);
+            //DbgMsg(__FILE__, __LINE__, __FUNCTION__"() ret/retn/iret instruction at "IFMT"\n", pInst);
             break;
         }
     }

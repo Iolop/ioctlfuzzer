@@ -95,11 +95,11 @@ void ProcessExceptionQueue(PDEVICE_OBJECT DeviceObject, PVOID Context)
             if (lpszExceptionStr)
             {
                 // print general exception information
-                LogData("%s at "IFMT"\r\n", lpszExceptionStr, Addr);
+                //LogData("%s at "IFMT"\r\n", lpszExceptionStr, Addr);
             }            
             else
             {
-                LogData("Unknown exception 0x%.8x at "IFMT"\r\n", Code, Addr);
+                //LogData("Unknown exception 0x%.8x at "IFMT"\r\n", Code, Addr);
             }
 
             LogData(" First chance: %s\r\n", Info->FirstChance?"Yes":"No");
@@ -112,12 +112,12 @@ void ProcessExceptionQueue(PDEVICE_OBJECT DeviceObject, PVOID Context)
                 Code == KI_EXCEPTION_ACCESS_VIOLATION)
             {
                 // print information for access violation exceptions
-                LogData(
-                    "  Access type: %s\r\n"
-                    "      Address: "IFMT"\r\n",
-                    Info->ExceptionRecord.ExceptionInformation[0]?"Write":"Read",
-                    Info->ExceptionRecord.ExceptionInformation[1]
-                );
+                //LogData(
+                //    "  Access type: %s\r\n"
+                //    "      Address: "IFMT"\r\n",
+                //    Info->ExceptionRecord.ExceptionInformation[0]?"Write":"Read",
+                //    Info->ExceptionRecord.ExceptionInformation[1]
+                //);
             }
             else
             {                
@@ -344,7 +344,7 @@ BOOLEAN ExcptHook(void)
     {
         f_KiDispatchException = RVATOVA(m_KernelBase, m_KiDispatchException_Offset);
 
-        DbgMsg(__FILE__, __LINE__, "nt!KiDispatchException() is at "IFMT"\n", f_KiDispatchException);
+        //DbgMsg(__FILE__, __LINE__, "nt!KiDispatchException() is at "IFMT"\n", f_KiDispatchException);
 
         PIMAGE_NT_HEADERS32 pHeaders32 = (PIMAGE_NT_HEADERS32)
             ((PUCHAR)m_KernelBase + ((PIMAGE_DOS_HEADER)m_KernelBase)->e_lfanew);

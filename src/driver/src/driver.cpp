@@ -1,5 +1,24 @@
 #include "stdafx.h"
 
+#define IFMT32 "0x%.8x"
+#define IFMT64 "0x%.16I64x"
+
+#define IFMT32_W L"0x%.8x"
+#define IFMT64_W L"0x%.16I64x"
+
+#ifdef _X86_
+
+#define IFMT IFMT32
+#define IFMT_W IFMT32_W
+
+#elif _AMD64_
+
+#define IFMT IFMT64
+#define IFMT_W IFMT64_W
+
+#endif
+
+
 /**
  * Offsets for some undocummented structures
  */
@@ -255,7 +274,7 @@ PVOID GetKeSDT(void)
 
     if (Ret)
     {
-        DbgMsg(__FILE__, __LINE__, __FUNCTION__"(): nt!KeServiceDescriptorTable is at "IFMT"\n", Ret);
+        //DbgMsg(__FILE__, __LINE__, __FUNCTION__"(): nt!KeServiceDescriptorTable is at "IFMT"\n", Ret);
     }
 
     return Ret;
@@ -419,11 +438,11 @@ BOOLEAN SetUpHooks(void)
             (LONG)new_NtDeviceIoControlFile
         );
 
-        DbgMsg(
-            __FILE__, __LINE__, 
-            "Hooking nt!NtDeviceIoControlFile(): "IFMT" -> "IFMT"\n",
-            old_NtDeviceIoControlFile, new_NtDeviceIoControlFile
-        );
+        //DbgMsg(
+        //   __FILE__, __LINE__, 
+        //    "Hooking nt!NtDeviceIoControlFile(): "IFMT" -> "IFMT"\n",
+        //    old_NtDeviceIoControlFile, new_NtDeviceIoControlFile
+        //);
 
 #elif _AMD64_
 
@@ -1307,7 +1326,7 @@ void DriverUnload(PDRIVER_OBJECT DriverObject)
 NTSTATUS NTAPI DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
 {    
     DbgInit();
-    DbgMsg(__FILE__, __LINE__, __FUNCTION__"(): '%wZ' "IFMT"\n", RegistryPath, KernelGetModuleBase("ioctlfuzzer.exe"));    
+    //DbgMsg(__FILE__, __LINE__, __FUNCTION__"(): '%wZ' "IFMT"\n", RegistryPath, KernelGetModuleBase("ioctlfuzzer.exe"));    
 
     DriverObject->DriverUnload = DriverUnload;
 

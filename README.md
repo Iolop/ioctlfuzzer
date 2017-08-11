@@ -1,10 +1,17 @@
 ```
 
+2917-08-11 9:52AM
+Compile success <in folder src/ . They are driver_i386.exp/lib/pdb/sys>
+
+2017-08-10 17:49PM
+I modified some definitions. All of them are recorded in src\driver\record.log
+
 2017-08-10 15:33PM
 
-When I try to compile the driver ,there is something wrong. So I fixed the include path<If you want to compile, please remember to fix the path in /src/driver/makefile_i386>
+When I try to compile the driver ,there is something wrong. So I fixed the include and lib path.
+<If you want to compile by yourself, please remember to fix every path in src\driver\makefile_i386 to make sure they point at the lib or include path on your own computer>
 
-After fix the include path, there is still a lot of error about some macros of definitions.
+After fix the include path, there is still a lot of error about some macros and definitions.
 BTW:Build.log is encoding in GBK.
 
 
@@ -167,7 +174,7 @@ Note: Kernel Debugger Communication engine uses breakpoints for interaction betw
 ==============================================
 
  Building from sources
- 
+
 ==============================================
 
 1. Download and install Windows Driver Kit Version 7.1.0

@@ -1,14 +1,29 @@
-	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c src/driver.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/driver.cpp
 driver.cpp
-d:\github-res\hook\ioctlfuzzer\src\driver\src\r0_common/undocnt.h(704): error C2061: 语法错误: 标识符“PKKERNEL_ROUTINE”
-d:\github-res\hook\ioctlfuzzer\src\driver\src\excpthook.h(18): error C2011: “_EXCEPTION_REGISTRATION_RECORD”:“struct”类型重定义
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\ntddk.h(4567): note: 参见“_EXCEPTION_REGISTRATION_RECORD”的声明
-src/driver.cpp(258): error C3688: 文本后缀“IFMT”无效；未找到文文本运算符或文本运算符模板“operator """"IFMT”
-src/driver.cpp(258): error C2664: “void DbgMsg(char *,int,char *,...)”: 无法将参数 3 从“PVOID”转换为“char *”
-src/driver.cpp(258): note: 从“void*”到指向非“void”的指针的转换要求显式类型转换
-src/driver.cpp(424): error C3688: 文本后缀“IFMT”无效；未找到文文本运算符或文本运算符模板“operator """"IFMT”
-src/driver.cpp(426): error C2664: “void DbgMsg(char *,int,char *,...)”: 无法将参数 3 从“NT_DEVICE_IO_CONTROL_FILE”转换为“char *”
-src/driver.cpp(426): note: 没有使该转换得以执行的上下文
-src/driver.cpp(1310): error C3688: 文本后缀“IFMT”无效；未找到文文本运算符或文本运算符模板“operator """"IFMT”
-src/driver.cpp(1310): error C2664: “void DbgMsg(char *,int,char *,...)”: 无法将参数 3 从“PUNICODE_STRING”转换为“char *”
-src/driver.cpp(1310): note: 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/r0_common/debug.cpp
+debug.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/r0_common/common.cpp
+common.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/r0_common/lst.cpp
+lst.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/rng.cpp
+rng.cpp
+	ml.exe /nologo /c src/asm/i386/common_asm.asm
+ Assembling: src/asm/i386/common_asm.asm
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/handlers.cpp
+handlers.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/hook.cpp
+hook.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/log.cpp
+log.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/rules.cpp
+rules.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- src/excpthook.cpp
+excpthook.cpp
+	cl.exe /nologo -I".\src" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\km\crt" -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared" -I".\src\r0_common" -DDBGMSG_FULL -DDBGMSG -DDBGPIPE -D_X86_=1 /Gz /GS- /c /W0 /WX- -DDBGCB_DRIVER ../dbgcb/common/dbgcb_client.cpp
+dbgcb_client.cpp
+	"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_arm\link.exe" /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\Lib\10.0.15063.0\km\x86" /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib" /OPT:REF /OPT:ICF /INCREMENTAL:NO /DEBUG /STACK:0x40000,0x1000 /DRIVER /BASE:0x10000 /ALIGN:0x80 /SUBSYSTEM:native,5.01 /ENTRY:DriverEntry /DEF:driver.def /OUT:..\driver_i386.sys driver.obj debug.obj common.obj lst.obj rng.obj common_asm.obj handlers.obj hook.obj log.obj rules.obj excpthook.obj dbgcb_client.obj ntoskrnl.lib hal.lib
+Microsoft (R) Incremental Linker Version 14.00.24215.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+  正在创建库 ..\driver_i386.lib 和对象 ..\driver_i386.exp

@@ -1,0 +1,16 @@
+- src\driver\src\excepthook.h annotate struct EXCEPTION_REGISTRATION_RECORD line 17-25
+
+- src\r0_common\common.h move definitions <IFMT> from this file to src\driver.cpp
+
+- src\driver.cpp annotate DbgMsg() line 277,441,1329
+
+- src\driver\src\r0_common\undocnt.h add definitions
+#define PKRUNDOWN_ROUTINE PULONG
+typedef void (*PKNORMAL_ROUTINE)(PVOID ,PVOID ,PVOID);
+typedef void (*PKKERNEL_ROUTINE)(_KAPC *,PKNORMAL_ROUTINE *, PVOID *,PVOID *,PVOID *);
+
+- src\driver\src\handlers.cpp annotate LogData() line 152,174,944,958,961
+
+- src\driver\src\hook.cpp annotate DBGMsg() line 41,49,58,73
+
+- src\driver\src\excepthook.cpp annotate DBGMSG() and Log_Data() line 98,102,117,347
