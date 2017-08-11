@@ -58,7 +58,7 @@ BOOL DrvDeviceRequest(PREQUEST_BUFFER Request, DWORD dwRequestSize)
         // send request to driver
         if (DeviceIoControl(
             hDevice, 
-            IOCTL_DRV_CONTROL, 
+            IOCTL_DRV_CONTROL, //METHOD_BUFFERED?
             Request, 
             dwRequestSize, 
             Response, 

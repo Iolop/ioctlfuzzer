@@ -747,7 +747,7 @@ NTSTATUS DriverDispatch(PDEVICE_OBJECT DeviceObject, PIRP Irp)
     {
         ULONG Code = stack->Parameters.DeviceIoControl.IoControlCode;        
         ULONG Size = stack->Parameters.DeviceIoControl.InputBufferLength;
-        PREQUEST_BUFFER Buff = (PREQUEST_BUFFER)Irp->AssociatedIrp.SystemBuffer;//SystemBuffer used on METHOD_IN/OUT_DIRECT,but here....
+        PREQUEST_BUFFER Buff = (PREQUEST_BUFFER)Irp->AssociatedIrp.SystemBuffer;
 
 #ifdef DBG_IO
 

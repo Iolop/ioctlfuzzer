@@ -1,0 +1,975 @@
+Opened log file 'D:\Github-Res\Hook\ioctlfuzzer\windbg.log'
+kd> g
+[00792] debug.cpp(240) : DbgInit(): Log file 'C:\Users\irx\Desktop\ioctlfuzzer\bin\ioctlfuzzer.log' created
+[00792] debug.cpp(164) : PipeServerThread(): Listening on pipe '\\.\pipe\IOCTLfuzzer'
+[00792] ioctlfuzzer.cpp(1029) : [+] Changing console screen buffer height from 300 to 4096 lines
+[00792] ioctlfuzzer.cpp(1092) : IOCTL Fuzzer
+[00792] ioctlfuzzer.cpp(1093) : by Oleksiuk Dmytro (aka Cr4sh) :: dmitry@esagelab.com
+[00792] ioctlfuzzer.cpp(1094) : (c) 2011 Esage Lab :: http://www.esagelab.com/
+[00792] ioctlfuzzer.cpp(1095) : Program version: 1.3.0.0
+[00792] service.cpp(102) : Creating service...
+[00792] service.cpp(123) : Allready exists
+[00792] service.cpp(142) : Starting service...
+[00792] service.cpp(155) : Allready running
+[00792] ioctlfuzzer.cpp(1217) : Thread for kernel mode APC's created (ID: 7e0)
+[00792] service.cpp(22) : Opening '\\.\Global\IOCTLfuzzer'...
+driver.cpp(1191) : DriverDispatch(): IRP_MJ_CREATE
+log.cpp(129) : [+] IOCTLs log started: "\??\C:\ioctls.log"
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01fafb6c, OutSize: 0x00000010
+    InBuff: 0x01fafb6c,  InSize: 0x00000010
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01fafb6c, OutSize: 0x00000010
+    InBuff: 0x01fafb6c,  InSize: 0x00000010
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01a9f9a4, OutSize: 0x00000010
+    InBuff: 0x01a9f9a4,  InSize: 0x00000010
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x0233fbc4, OutSize: 0x00000010
+    InBuff: 0x0233fbc4,  InSize: 0x00000010
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01fafb6c, OutSize: 0x00000010
+    InBuff: 0x01fafb6c,  InSize: 0x00000010
+
+Process 0x85346a50 terminated
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x021af704, OutSize: 0x00000010
+    InBuff: 0x021af704,  InSize: 0x00000010
+
+Process 0x852e2508 terminated
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01fafb6c, OutSize: 0x00000010
+    InBuff: 0x01fafb6c,  InSize: 0x00000010
+
+'C:\Windows\system32\svchost.exe' (PID: 1144)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0067f680, OutSize: 0x0000003c
+    InBuff: 0x0067f680,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a040,  Method: METHOD_BUFFERED
+   OutBuff: 0x0192f190, OutSize: 0x0000008c
+    InBuff: 0x0192f190,  InSize: 0x0000008c
+
+'C:\Windows\system32\svchost.exe' (PID: 1144)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0067f680, OutSize: 0x0000003c
+    InBuff: 0x0067f680,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a044,  Method: METHOD_BUFFERED
+   OutBuff: 0x0192f218, OutSize: 0x00000008
+    InBuff: 0x0192f218,  InSize: 0x00000008
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f238, OutSize: 0x0000003c
+    InBuff: 0x0192f238,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f238, OutSize: 0x0000003c
+    InBuff: 0x0192f238,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f298, OutSize: 0x00000038
+    InBuff: 0x0192f298,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192edf8, OutSize: 0x00000038
+    InBuff: 0x0192edf8,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a048,  Method: METHOD_BUFFERED
+   OutBuff: 0x025ffce4, OutSize: 0x00000040
+    InBuff: 0x025ffce4,  InSize: 0x00000040
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x0106f6b8, OutSize: 0x00000010
+    InBuff: 0x0106f6b8,  InSize: 0x00000010
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\NetBT_Tcpip_{39285FEB-7090-40FA-A69E-AF5436CF2E57}' (0x868e1280) [\SystemRoot\System32\DRIVERS\netbt.sys]
+IOCTL Code: 0x0021009a,  Method: METHOD_OUT_DIRECT
+   OutBuff: 0x0192f2c8, OutSize: 0x0000003c
+    InBuff: 0x00000000,  InSize: 0x00000000
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012000f,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f28c, OutSize: 0x00000038
+    InBuff: 0x0192f28c,  InSize: 0x00000038
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f214, OutSize: 0x0000003c
+    InBuff: 0x0192f214,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f214, OutSize: 0x0000003c
+    InBuff: 0x0192f214,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f218, OutSize: 0x0000003c
+    InBuff: 0x0192f218,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Nsi' (0x860c2030) [\SystemRoot\system32\drivers\nsiproxy.sys]
+IOCTL Code: 0x0012001b,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f218, OutSize: 0x0000003c
+    InBuff: 0x0192f218,  InSize: 0x0000003c
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Afd' (0x85aec9d0) [\SystemRoot\system32\drivers\afd.sys]
+IOCTL Code: 0x00012047,  Method: METHOD_NEITHER
+   OutBuff: 0x0192ef6c, OutSize: 0x00000010
+    InBuff: 0x0192eedc,  InSize: 0x000000a4
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\Afd' (0x85aec9d0) [\SystemRoot\system32\drivers\afd.sys]
+IOCTL Code: 0x000120bf,  Method: METHOD_NEITHER
+   OutBuff: 0x0192f38c, OutSize: 0x000005f0
+    InBuff: 0x0192f268,  InSize: 0x00000018
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a048,  Method: METHOD_BUFFERED
+   OutBuff: 0x0192f2e8, OutSize: 0x00000028
+    InBuff: 0x0192f2e8,  InSize: 0x00000028
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a048,  Method: METHOD_BUFFERED
+   OutBuff: 0x0192f9f4, OutSize: 0x00000040
+    InBuff: 0x0192f9f4,  InSize: 0x00000040
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01a9f9a4, OutSize: 0x00000010
+    InBuff: 0x01a9f9a4,  InSize: 0x00000010
+
+'C:\Windows\System32\VBoxService.exe' (PID: 664)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a00c,  Method: METHOD_BUFFERED
+   OutBuff: 0x0192fa90, OutSize: 0x00000020
+    InBuff: 0x0192fa90,  InSize: 0x00000020
+
+'C:\Windows\System32\VBoxTray.exe' (PID: 1820)
+'\Device\VBoxGuest' (0x85f04030) [\SystemRoot\system32\DRIVERS\VBoxGuest.sys]
+IOCTL Code: 0x0022a008,  Method: METHOD_BUFFERED
+   OutBuff: 0x01fafb6c, OutSize: 0x00000010
+    InBuff: 0x01fafb6c,  InSize: 0x00000010
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be3ec, OutSize: 0x00000008
+    InBuff: 0x018be2b0,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018bed24, OutSize: 0x00000004
+    InBuff: 0x018becc8,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018beca8, OutSize: 0x0000000c
+    InBuff: 0x018bec80,  InSize: 0x00000028
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x012c01f0, OutSize: 0x0000000c
+    InBuff: 0x018bec90,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x012c01d0, OutSize: 0x00000020
+    InBuff: 0x018bec94,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018bec80, OutSize: 0x00000004
+    InBuff: 0x018bec5c,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018bec80, OutSize: 0x00000004
+    InBuff: 0x018bec5c,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018beacc, OutSize: 0x00000004
+    InBuff: 0x018bea58,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be878, OutSize: 0x00000004
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be874, OutSize: 0x00000004
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be880, OutSize: 0x00000010
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be89c, OutSize: 0x00000207
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be770,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x0026f268, OutSize: 0x00000112
+    InBuff: 0x018be770,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be778,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be778,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7fc, OutSize: 0x00000060
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be878, OutSize: 0x00000004
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be874, OutSize: 0x00000004
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be880, OutSize: 0x00000010
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be89c, OutSize: 0x00000207
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be770,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be778,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x0027b4c8, OutSize: 0x0000005c
+    InBuff: 0x018be778,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be778,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00277bf8, OutSize: 0x00000020
+    InBuff: 0x018be778,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7fc, OutSize: 0x00000060
+    InBuff: 0x018be774,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0007,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be75c,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018bea64,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x0025ecd0, OutSize: 0x00000028
+    InBuff: 0x018bea64,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be890, OutSize: 0x00000208
+    InBuff: 0x018be810,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7c4, OutSize: 0x00000028
+    InBuff: 0x018be7ec,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00278500, OutSize: 0x00000098
+    InBuff: 0x018be7ec,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7ec, OutSize: 0x00000004
+    InBuff: 0x018be7c0,  InSize: 0x00000028
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7c4, OutSize: 0x00000028
+    InBuff: 0x018be7ec,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7ec, OutSize: 0x00000004
+    InBuff: 0x018be7c0,  InSize: 0x00000028
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0007,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be7c8,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be890, OutSize: 0x00000208
+    InBuff: 0x018be810,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7c4, OutSize: 0x00000028
+    InBuff: 0x018be7ec,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7c4, OutSize: 0x00000028
+    InBuff: 0x018be7ec,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x002785a0, OutSize: 0x00000098
+    InBuff: 0x018be7ec,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7ec, OutSize: 0x00000004
+    InBuff: 0x018be7c0,  InSize: 0x00000028
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7ec, OutSize: 0x00000004
+    InBuff: 0x018be7c0,  InSize: 0x00000028
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0007,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be7c8,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018bea48,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x0025b6e0, OutSize: 0x00000038
+    InBuff: 0x018bea48,  InSize: 0x00000018
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018bea4c, OutSize: 0x00000004
+    InBuff: 0x018be9d8,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7f8, OutSize: 0x00000004
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7f4, OutSize: 0x00000004
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be800, OutSize: 0x00000010
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be81c, OutSize: 0x00000207
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be6f0,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be6f8,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be6f8,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be77c, OutSize: 0x00000060
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0007,  Method: METHOD_NEITHER
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be6dc,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7f8, OutSize: 0x00000004
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be7f4, OutSize: 0x00000004
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be800, OutSize: 0x00000010
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+   OutBuff: 0x018be81c, OutSize: 0x00000207
+    InBuff: 0x018be6f4,  InSize: 0x00000020
+
+'C:\Windows\system32\AUDIODG.EXE' (PID: 2508)
+'\Device\00000049' (0x865ce598) [\SystemRoot\system32\DRIVERS\HDAudBus.sys]
+IOCTL Code: 0x002f0003,  Method: METHOD_NEITHER
+driver.cpp(1216) : DriverDispatch(): IRP_MJ_CLOSE
+   OutBuff: 0x00000000, OutSize: 0x00000000
+    InBuff: 0x018be6f0,  InSize: 0x00000020
+
+driver.cpp(1250) : [+] IOCTLs log closed "\??\C:\ioctls.log"
+[00792] service.cpp(190) : Opening service...
+[00792] service.cpp(198) : OK
+[00792] service.cpp(199) : Stopping service...
+driver.cpp(1265) : DriverUnload()
+[00792] service.cpp(204) : OK
+
+*** Fatal System Error: 0x000000ce
+                       (0x98F31C11,0x00000008,0x98F31C11,0x00000000)
+
+Driver at fault: IOCTL_fuzzer.sys.
+Break instruction exception - code 80000003 (first chance)
+
+A fatal system error has occurred.
+Debugger entered on first try; Bugcheck callbacks have not been invoked.
+
+A fatal system error has occurred.
+
+Connected to Windows 7 7600 x86 compatible target at (Fri Aug 11 10:31:06.893 2017 (UTC + 8:00)), ptr64 FALSE
+Loading Kernel Symbols
+.......................................................
+
+Press ctrl-c (cdb, kd, ntsd) or ctrl-break (windbg) to abort symbol loads that take too long.
+Run !sym noisy before .reload to track down problems loading symbols.
+
+........
+................................................................
+.......
+Loading User Symbols
+..................................
+Loading unloaded module list
+......
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+Use !analyze -v to get detailed debugging information.
+
+BugCheck CE, {98f31c11, 8, 98f31c11, 0}
+
+Probably caused by : IOCTL_fuzzer.sys
+
+Followup:     MachineOwner
+---------
+
+nt!RtlpBreakWithStatusInstruction:
+83ca3394 cc              int     3
+kd> g
+Shutdown occurred at (Fri Aug 11 10:43:07.274 2017 (UTC + 8:00))...unloading all symbol tables.
+Waiting to reconnect...
+BD: Boot Debugger Initialized
+Connected to Windows Boot Debugger 7600 x86 compatible target at (Fri Aug 11 10:43:12.739 2017 (UTC + 8:00)), ptr64 FALSE
+Kernel Debugger connection established.
+
+************* Symbol Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*
+Symbol search path is: srv*
+Executable search path is: 
+ReadVirtual() failed in GetXStateConfiguration() first read attempt (error == 997.
+Windows Boot Debugger Kernel Version 7600 UP Free x86 compatible
+Machine Name:
+Primary image base = 0x0052d000 Loaded module list = 0x005c7b40
+System Uptime: not available
+winload!DbgLoadImageSymbols+0x44:
+005632aa cc              int     3
+kd> !analyze -v
+kd> g
+Shutdown occurred at (Fri Aug 11 10:43:43.827 2017 (UTC + 8:00))...unloading all symbol tables.
+Waiting to reconnect...
+Connected to Windows 7 7600 x86 compatible target at (Fri Aug 11 10:45:21.378 2017 (UTC + 8:00)), ptr64 FALSE
+Kernel Debugger connection established.
+
+************* Symbol Path validation summary **************
+Response                         Time (ms)     Location
+Deferred                                       srv*
+Symbol search path is: srv*
+Executable search path is: 
+Windows 7 Kernel Version 7600 MP (1 procs) Free x86 compatible
+Product: WinNt, suite: TerminalServer SingleUserTS Personal
+Built by: 7600.16385.x86fre.win7_rtm.090713-1255
+Machine Name:
+Kernel base = 0x83c01000 PsLoadedModuleList = 0x83d49810
+Debug session time: Fri Aug 11 10:45:15.857 2017 (UTC + 8:00)
+System Uptime: 0 days 0:00:55.728
+Break instruction exception - code 80000003 (first chance)
+*******************************************************************************
+*                                                                             *
+*   You are seeing this message because you pressed either                    *
+*       CTRL+C (if you run console kernel debugger) or,                       *
+*       CTRL+BREAK (if you run GUI kernel debugger),                          *
+*   on your debugger machine's keyboard.                                      *
+*                                                                             *
+*                   THIS IS NOT A BUG OR A SYSTEM CRASH                       *
+*                                                                             *
+* If you did not intend to break into the debugger, press the "g" key, then   *
+* press the "Enter" key now.  This message might immediately reappear.  If it *
+* does, press "g" and "Enter" again.                                          *
+*                                                                             *
+*******************************************************************************
+nt!RtlpBreakWithStatusInstruction:
+83c6c394 cc              int     3
+kd> !analyze -v
+Connected to Windows 7 7600 x86 compatible target at (Fri Aug 11 10:45:27.534 2017 (UTC + 8:00)), ptr64 FALSE
+Loading Kernel Symbols
+........
+
+Press ctrl-c (cdb, kd, ntsd) or ctrl-break (windbg) to abort symbol loads that take too long.
+Run !sym noisy before .reload to track down problems loading symbols.
+
+.......................................................
+................................................................
+......
+Loading User Symbols
+
+Loading unloaded module list
+.....
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+Unknown bugcheck code (0)
+Unknown bugcheck description
+Arguments:
+Arg1: 00000000
+Arg2: 00000000
+Arg3: 00000000
+Arg4: 00000000
+
+Debugging Details:
+------------------
+
+
+DUMP_CLASS: 1
+
+DUMP_QUALIFIER: 0
+
+BUILD_VERSION_STRING:  6.1.7600.16385 (win7_rtm.090713-1255)
+
+DUMP_TYPE:  0
+
+BUGCHECK_P1: 0
+
+BUGCHECK_P2: 0
+
+BUGCHECK_P3: 0
+
+BUGCHECK_P4: 0
+
+PROCESS_NAME:  System
+
+FAULTING_IP: 
+nt!RtlpBreakWithStatusInstruction+0
+83c6c394 cc              int     3
+
+ERROR_CODE: (NTSTATUS) 0x80000003 - <Unable to get error code text>
+
+EXCEPTION_CODE: (HRESULT) 0x80000003 (2147483651) - <Unable to get error code text>
+
+EXCEPTION_CODE_STR:  80000003
+
+EXCEPTION_PARAMETER1:  00000000
+
+EXCEPTION_PARAMETER2:  83d34280
+
+EXCEPTION_PARAMETER3:  00000000
+
+CPU_COUNT: 1
+
+CPU_MHZ: a20
+
+CPU_VENDOR:  GenuineIntel
+
+CPU_FAMILY: 6
+
+CPU_MODEL: 5e
+
+CPU_STEPPING: 3
+
+CPU_MICROCODE: 6,5e,3,0 (F,M,S,R)  SIG: 0'00000000 (cache) 0'00000000 (init)
+
+DEFAULT_BUCKET_ID:  INTEL_CPU_MICROCODE_ZERO
+
+BUGCHECK_STR:  0x0
+
+CURRENT_IRQL:  1c
+
+ANALYSIS_SESSION_HOST:  DESKTOP-OL09M94
+
+ANALYSIS_SESSION_TIME:  08-11-2017 10:46:43.0318
+
+ANALYSIS_VERSION: 10.0.15063.137 amd64fre
+
+STACK_TEXT:  
+83d27b80 83c6c38f 00000001 83c6c361 00000000 nt!RtlpBreakWithStatusInstruction
+83d27b88 83c6c361 00000000 00000000 00004200 nt!KdCheckForDebugBreak+0x22
+83d27bb8 83c6c1ef 84022106 0a4ba5a4 00000000 nt!KeUpdateRunTime+0x164
+83d27c14 83c71577 0000df02 0000df02 00000030 nt!KeUpdateSystemTime+0x613
+83d27c14 84022106 0000df02 0000df02 00000030 nt!KeUpdateSystemTimeAssist+0x13
+83d27c98 83c8678c 86db1c70 83d34280 83d2ac00 hal!HalProcessorIdle+0x2
+83d27d20 83c6900d 00000000 0000000e 00000000 nt!PoIdle+0x62f
+83d27d24 00000000 0000000e 00000000 00000000 nt!KiIdleLoop+0xd
+
+
+STACK_COMMAND:  kb
+
+THREAD_SHA1_HASH_MOD_FUNC:  f55ee1d722eb022c83b56d61058d15e50314e938
+
+THREAD_SHA1_HASH_MOD_FUNC_OFFSET:  315857c382a25d1a3501b533d8e21e38464e7050
+
+THREAD_SHA1_HASH_MOD:  7f43d23a032f6c239721f027068cc4f673e9fdf3
+
+FOLLOWUP_IP: 
+nt!RtlpBreakWithStatusInstruction+0
+83c6c394 cc              int     3
+
+FAULT_INSTR_CODE:  4c2cc
+
+SYMBOL_STACK_INDEX:  0
+
+SYMBOL_NAME:  nt!RtlpBreakWithStatusInstruction+0
+
+FOLLOWUP_NAME:  MachineOwner
+
+MODULE_NAME: nt
+
+IMAGE_NAME:  ntkrpamp.exe
+
+DEBUG_FLR_IMAGE_TIMESTAMP:  4a5bc007
+
+IMAGE_VERSION:  6.1.7600.16385
+
+BUCKET_ID:  MANUAL_BREAKIN
+
+PRIMARY_PROBLEM_CLASS:  MANUAL_BREAKIN
+
+FAILURE_BUCKET_ID:  MANUAL_BREAKIN
+
+TARGET_TIME:  2017-08-11T02:45:15.000Z
+
+OSBUILD:  7600
+
+OSSERVICEPACK:  16385
+
+SERVICEPACK_NUMBER: 0
+
+OS_REVISION: 0
+
+SUITE_MASK:  784
+
+PRODUCT_TYPE:  1
+
+OSPLATFORM_TYPE:  x86
+
+OSNAME:  Windows 7
+
+OSEDITION:  Windows 7 WinNt TerminalServer SingleUserTS Personal
+
+OS_LOCALE:  
+
+USER_LCID:  0
+
+OSBUILD_TIMESTAMP:  2009-07-14 07:15:19
+
+BUILDDATESTAMP_STR:  090713-1255
+
+BUILDLAB_STR:  win7_rtm
+
+BUILDOSVER_STR:  6.1.7600.16385
+
+ANALYSIS_SESSION_ELAPSED_TIME:  824b
+
+ANALYSIS_SOURCE:  KM
+
+FAILURE_ID_HASH_STRING:  km:manual_breakin
+
+FAILURE_ID_HASH:  {30cbeaaa-35e3-de0f-a585-406cd241c851}
+
+Followup:     MachineOwner
+---------
+
+kd> k
+ # ChildEBP RetAddr  
+00 83d27b80 83c6c38f nt!RtlpBreakWithStatusInstruction
+01 83d27b88 83c6c361 nt!KdCheckForDebugBreak+0x22
+02 83d27bb8 83c6c1ef nt!KeUpdateRunTime+0x164
+03 83d27c14 83c71577 nt!KeUpdateSystemTime+0x613
+04 83d27c14 84022106 nt!KeUpdateSystemTimeAssist+0x13
+05 83d27c98 83c8678c hal!HalProcessorIdle+0x2
+06 83d27d20 83c6900d nt!PoIdle+0x62f
+07 83d27d24 00000000 nt!KiIdleLoop+0xd
+kd> g
+nt!DbgLoadImageSymbols+0x47:
+83c19fa6 cc              int     3
+kd> g
+[03476] debug.cpp(240) : DbgInit(): Log file 'C:\Users\irx\Desktop\ioctlfuzzer\bin\ioctlfuzzer.log' created
+[03476] debug.cpp(164) : PipeServerThread(): Listening on pipe '\\.\pipe\IOCTLfuzzer'
+[03476] service.cpp(190) : Opening service...
+[03476] service.cpp(198) : OK
+[03476] service.cpp(199) : Stopping service...
+[03476] service.cpp(209) : ControlService() ERROR 1062
+[03476] service.cpp(237) : Opening service...
+[03476] service.cpp(245) : OK
+[03476] service.cpp(246) : Deleting service...
+[03476] service.cpp(251) : OK
+VBOXNP: DLL loaded.
+01:28:42.525084 control  Guest control service stopped
+01:28:42.685315 control  Guest control worker returned with rc=VINF_SUCCESS
+01:28:42.695329 main     Session 0 is about to close ...
+01:28:42.705344 main     Stopping all guest processes ...
+01:28:42.715358 main     Closing all guest files ...
+01:28:42.735387 main     Ended.

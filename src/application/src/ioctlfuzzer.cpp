@@ -813,7 +813,7 @@ int _tmain(int argc, _TCHAR* argv[])
     InitCommonControls();
 
     GetSystemDirectory(szDriverFileName, sizeof(szDriverFileName));
-    lstrcat(szDriverFileName, "\\drivers\\" DRIVER_FILE_NAME);
+    lstrcat(szDriverFileName, "\\drivers\\" DRIVER_FILE_NAME);//C:\Windows\System32\drivers\IOCTL_fuzzer.sys
     lstrcpy(szServiceFileName, "system32\\drivers\\" DRIVER_FILE_NAME);
 
     HANDLE hGlobalMutex = CreateMutex(NULL, FALSE, GLOBAL_MUTEX_NAME);
@@ -867,7 +867,8 @@ int _tmain(int argc, _TCHAR* argv[])
     char szProductVersion[0x100] = "<unknown>";  
     char szProcessFileName[MAX_PATH];
     GetModuleFileName(GetModuleHandle(NULL), szProcessFileName, sizeof(szProcessFileName));
-    
+
+	//what? options?
     if (argc > 1)
     {
         for (int i = 1; i < argc; i++)
@@ -877,7 +878,7 @@ int _tmain(int argc, _TCHAR* argv[])
                 // bootfuzzing mode has been enabled
                 m_bBootFuzzing = TRUE;
             }
-            else if (!lstrcmp(argv[i], "--uninstall"))
+            else if (!lstrcmp(argv[i], "--uninstall")) //does this mean that this exe could load IOCTL_fuzzer.sys by itself?
             {
                 // uninstall service/driver and exit
                 DrvServiceStop(DRIVER_SERVICE_NAME);
@@ -972,6 +973,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
         ExitProcess(0);
     }
+
+	//conflict options detect
 
     PSYSTEM_KERNEL_DEBUGGER_INFORMATION DebuggerInfo = (PSYSTEM_KERNEL_DEBUGGER_INFORMATION)
         GetSysInf(SystemKernelDebuggerInformation);
@@ -1168,6 +1171,8 @@ int _tmain(int argc, _TCHAR* argv[])
     DWORD dwDriverDataSize = 0;
 
     // extract kernel driver from resources
+	//why i have to compile the sys......
+	
     if (GetResPayload(GetModuleHandle(NULL), RESOURCE_NAME_DRIVER, &DriverData, &dwDriverDataSize))
     {
         // ... and dump it to the disk
@@ -1185,6 +1190,7 @@ int _tmain(int argc, _TCHAR* argv[])
         goto end;
     }
 
+//load the driver and start it.
     if (!DrvServiceStart(DRIVER_SERVICE_NAME, szDriverFileName, NULL))
     {
         DbgMsg(__FILE__, __LINE__, "Error while creating/starting system service for kernel driver.\r\n");
