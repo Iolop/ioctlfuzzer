@@ -757,19 +757,21 @@ NTSTATUS DriverDispatch(PDEVICE_OBJECT DeviceObject, PIRP Irp)
 
         switch (Code)
         {
-        case IOCTL_DRV_CONTROL:
+        case IOCTL_DRV_CONTROL://main control code from DrvDeviceRequest()
             {
                 Buff->Status = S_ERROR;
 
                 if (Size >= sizeof(REQUEST_BUFFER))//inputBufferLength >= struct<REQUEST_BUFFER>
                 {
                     ULONG KdCommandLength = 0;
-                    IOCTL_FILTER Flt;                    
+                    IOCTL_FILTER Flt;   // a link table struct                 
                     RtlZeroMemory(&Flt, sizeof(Flt));
 
                     if (Buff->AddObject.bDbgcbAction && Size > sizeof(REQUEST_BUFFER))
                     {
                         // check for zero byte at the end of the string
+                        //From _tmain,Size=sizeof(REQUEST_BUFFER),what doed this mean?
+                        //Size-sizeof(REQUEST_BUFFER) ok, we suppose it would work here.
                         if (Buff->Buff[Size - sizeof(REQUEST_BUFFER) - 1] != 0)
                         {          
                             goto _bad_addobj_request;
@@ -980,7 +982,7 @@ _bad_addobj_request:
                                 if ((m_FuzzOptions & FUZZ_OPT_LOG_EXCEPTIONS) &&
                                     Buff->Options.KiDispatchException_Offset > 0)
                                 {
-                                    // ofsset of unexported function for exceptions monitoring
+                                    // offset of unexported function for exceptions monitoring
                                     m_KiDispatchException_Offset = Buff->Options.KiDispatchException_Offset;
 
                                     if (!m_bKiDispatchExceptionHooked)

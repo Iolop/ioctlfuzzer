@@ -1171,7 +1171,7 @@ int _tmain(int argc, _TCHAR* argv[])
     DWORD dwDriverDataSize = 0;
 
     // extract kernel driver from resources
-	//why i have to compile the sys......
+    // why i have to compile the sys......
 	
     if (GetResPayload(GetModuleHandle(NULL), RESOURCE_NAME_DRIVER, &DriverData, &dwDriverDataSize))
     {

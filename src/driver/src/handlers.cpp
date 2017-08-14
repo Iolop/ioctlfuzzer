@@ -333,7 +333,7 @@ void FuzzContinue_NtDeviceIoControlFile(
                 }
               
                 // change previous mode to UserMode
-                SetPreviousMode(PrevMode);
+                SetPreviousMode(PrevMode);//why here?
 
                 // send fuzzed request
                 NTSTATUS status = old_NtDeviceIoControlFile(
